@@ -136,12 +136,22 @@ header{
   color: #666666;
 }
 
-.content-area p{
+.content-area ul{
   font-family:"Zalando Sans Expanded", sans-serif;
-  padding: 2% 0;
-  line-height: 5px;
+  line-height: 25px;
   text-align: justify;
   color: #282820;
+}
+
+.content-area p{
+  font-family:"Zalando Sans Expanded", sans-serif;
+  line-height: 25px;
+  text-align: justify;
+  color: #282820;
+}
+
+.content-area hr{
+  color: #666666;
 }
 
 div.scroll-container {
@@ -153,4 +163,9 @@ div.scroll-container {
 
 div.scroll-container img {
   padding: 10px;
+}
+
+video {
+  float: right;
+  margin: 0px 0px 15px 20px;
 }
