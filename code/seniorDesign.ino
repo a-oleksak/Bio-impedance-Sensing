@@ -298,12 +298,11 @@ void frequencySweepRaw() {
             Serial.println("Could not get raw frequency data...");
         }
 
-        // Print out the frequency data - MIGHT WANT TO COMMENT THIS OUT LATER
-        Serial.print(cfreq);
-        Serial.print(": R=");
-        Serial.print(real);
-        Serial.print("/I=");
-        Serial.print(imag);
+        // print out the frequency data
+        Serial.print(cfreq); Serial.print(","); //prints current frequency
+        Serial.print(STEPS_taken); Serial.print(",");//prints step position
+        Serial.print(real); Serial.print(","); //prints real value
+        Serial.print(imag); Serial.print(",");//prints imaginary value
 
         // Compute impedance
         double magnitude = sqrt(pow(real, 2) + pow(imag, 2));
@@ -314,8 +313,7 @@ void frequencySweepRaw() {
           currentImpedance = impedance;
         }
 
-        Serial.print("  |Z|=");
-        Serial.println(impedance);
+        Serial.println(impedance); // prints impedance value
 
         // Increment the frequency
         i++;
