@@ -95,7 +95,7 @@ void setup(void) {
     Serial.println("Calibrated!");
   else
     Serial.println("Calibration failed...");
-  }
+  
   
   // Set target motor RPM
   stepper.begin(RPM);
