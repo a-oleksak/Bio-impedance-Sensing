@@ -56,8 +56,9 @@ Probes currentProbe = probes_8mm; // Initial set of probes
 
 // -----------------------------------------------------------------------------------------
 // global variables for anomaly detection
-double previousImpedance = 0.0;
-double currentImpedance = 0.0;          
+//double previousImpedance = 0.0;
+double currentImpedance = 0.0;
+double baselineImpedance = 0.0; // stores the last normal reading          
 bool firstMeasurement = false;
 const double RATE_OF_CHANGE_THRESHOLD = 0.20; // 20% threshold - LOOK INTO LATER
 
@@ -256,24 +257,22 @@ void handleError() {
 // threshold
 bool anomalyDetection() {
   if (!firstMeasurement) {
-    // stores first measurement
-    previousImpedance = currentImpedance;
+    //previousImpedance = currentImpedance;
+    baselineImpedance = currentImpedance; // store baseline
     firstMeasurement = true;
     return false;
   }
-        
-  // Calculate percentage change
-  double percentageChange = abs((currentImpedance - previousImpedance) / previousImpedance) * 100.0;
-    
-  // Store current for next comparison
-  previousImpedance = currentImpedance;
-    
-  // Check threshold
-  if (percentageChange > RATE_OF_CHANGE_THRESHOLD * 100) { // anomaly detected
-    return true;
-  }
   
+  // compare against baseline
+  double percentageChange = abs((currentImpedance - baselineImpedance) / baselineImpedance) * 100.0;
+  
+  if (percentageChange > RATE_OF_CHANGE_THRESHOLD * 100) {
+    return true; // still in anomaly
+  } else {
+    // when we return to normal, update baseline
+    baselineImpedance = currentImpedance;
     return false;
+  }
 }
 // -----------------------------------------------------------------------------------------
 // selects which pairs of probes we will use for measuring
