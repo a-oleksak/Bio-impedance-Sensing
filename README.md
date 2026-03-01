@@ -7,6 +7,8 @@ The following is contained within the `main branch` of this repository:
 - demo codes for each component and subsystem,
 - draft of our overall code
 
+Please consider visiting our [website](https://a-oleksak.github.io/Bio-impedance-Sensing/).
+
 Compatibility
 =============
 This library *should* be compatible with any verison of Arduino IDE, albeit perhaps with some changes. It was developed and tested with version 2.3.7.
