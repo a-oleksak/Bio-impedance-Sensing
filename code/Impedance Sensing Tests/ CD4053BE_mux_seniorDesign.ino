@@ -9,7 +9,7 @@ ad5933-test
 
 #define START_FREQ  (3000)
 #define FREQ_INCR   (1000)
-#define NUM_INCR    (5)
+#define NUM_INCR    (4)
 #define REF_RESIST  (2000)
 
 // select pins - for each probe pair
@@ -24,6 +24,8 @@ Probes currentProbe = probes_8mm; // Initial set of probes
 
 double gain[NUM_INCR+1];
 int phase[NUM_INCR+1];
+
+double manualGain = 1.8089e-7; // hardcoded gain value used for impedance calculation
 
 // NOTE: In this repo's AD5933 library, setRange(byte) is NON-static,
 // so we keep a single instance ONLY to call setRange().
@@ -69,14 +71,7 @@ void setup(void)
 
 void loop(void)
 {
-  // Run only 5 total cycles (8mm + 12mm), then stop.
-  // (This is the only behavior change vs the GitHub file, which runs forever.)
-  static int cycleCount = 0;
-  if (cycleCount >= 5) {
-    Serial.println("Finished 5 cycles. Stopping.");
-    while (true) ;
-  }
-
+  // Run forever (matches the GitHub behavior)
   frequencySweepRaw();
   currentProbe = probes_12mm;
   selectProbe(currentProbe);
@@ -90,8 +85,6 @@ void loop(void)
 
   // Delay
   delay(5000);
-
-  cycleCount++;
 }
 
 // allows for data to be processed in real time.
@@ -121,11 +114,11 @@ void frequencySweepRaw() {
         Serial.print("/I=");
         Serial.print(imag);
 
-        // Compute impedance
+        // Compute impedance using hardcoded gain value
         // (Guard i to protect gain[] bounds in case the library returns extra points.)
         if (i < (NUM_INCR + 1)) {
           double magnitude = sqrt(pow(real, 2) + pow(imag, 2));
-          double impedance = 1/(magnitude*gain[i]);
+          double impedance = 1/(magnitude * manualGain);
           Serial.print("  |Z|=");
           Serial.println(impedance);
         } else {
