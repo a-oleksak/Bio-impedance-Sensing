@@ -24,7 +24,7 @@ A4988 stepper(MOTOR_STEPS, DIR, STEP, SLEEP, MS1, MS2, MS3);
 #define NUM_INCR    (4) // measures from 3kHz to 7kHz
 // #define REF_RESIST  (10000) // not needed right now
 
-double gain = 2.545 * pow(10,-8); // NEW GAIN VALUE NEED TO CHANGE FOR ALL CODES 
+double gain = 1.8089 * pow(10,-7); // NEW GAIN VALUE NEED TO CHANGE FOR ALL CODES 
 //double phase;
 
 // -----------------------------------------------------------------------------------------
