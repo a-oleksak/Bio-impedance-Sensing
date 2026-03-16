@@ -31,7 +31,7 @@ Hardware
 
 Connections & Wiring
 ====================
-<img src="https://github.com/a-oleksak/Bio-impedance-Sensing/blob/website/img/Senior%20Design%20Connections%20Diagram%20Version%204.jpg?raw=true" width="750" height="750" >
+<img src="https://github.com/a-oleksak/Bio-impedance-Sensing/blob/website/img/Copy%20of%20Senior%20Design%20Connections%20Diagram%20Version%204.png?raw=true" width="750" height="750" >
 
 References
 ==========
