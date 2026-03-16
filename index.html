@@ -32,45 +32,89 @@
 						<h2>Electrical Impedance Spectroscopy for Bioimpedance Imaging Applications </h2>
 						<h3>Features</h3>
 							<p>
+								This project proposes an imaging system for melanoma detection using EIS.<br> We have achieved the following with our design:
 								<video 
 										src="vid/video.mp4" 
-										width="750" height="500" 
+										width="600" height="350" 
 										class="video" 
 										controls
 										autoplay loop muted></video>
-								This project proposes an imaging system for melanoma detection using EIS. We have achieved the following with our design:
 								<ul>
 									<li>A more convenient, portable sensor design</li>
 									<li>Affordability</li>
 									<li>Non-invasiveness</li>
 								</ul>
 							</p>
+						<h3>System Operation</h3>
+							<p>
+								<table>
+								<tr>
+									<th style="width:20%"><img src="img/electricity-hazard.png" style="width:25%"></th>
+									<td style="width:70%">Measures the impedance of the skin surface by applying a safe voltage level at specific frequencies.</th>
+								</tr>
+								<tr>
+									<th style="width:20%"><img src="img/electrode.png" style="width:25%"></th>
+									<td style="width:70%">Current flows between two pairs of two electrodes that glide across the skin surface</td>
+								</tr>
+								<tr>
+									<th style="width:20%"><img src="img/wifi-router.png" style="width:25%"></th>
+									<td style="width:70%">Transmits real-time impedance data to a PC for analysis from the MCU</td>
+								</tr>
+								<tr>
+									<th style="width:20%"><img src="img/settings.png" style="width:25%"></th>
+									<td style="width:70%">Features automatic adjustment when detecting impedance variations, for a more refined reading.</td>
+								</tr>
+								</table>
+								<br>
+								
+							</p>				
+						<h3>Images</h3>
+							<br><br>
+							<div class="scroll-container">
+								<img src="img/component_box_side.png" title="First Prototype, Side View" style="width:750px;height:500px;">
+								<img src="img/image5.png" title="First Prototype, Components Visable"style="width:750px;height:500px;">
+								<img src="img/image6.jpg" title="Motor Subsystem" style="width:500px;height:500px;">
+								<img src="img/image2.png" title="Impedance Sensing Subsystem" style="width:750px;height:500px;">
+								<img src="img/Screenshot 2026-02-23 214332.png" title="AD5933 Wiring"style="width:600px;height:500px;">
+								<img src="img/IMG_3762.png" title="Motor 3D-Print" style="width:750px;height:500px;">
+								<img src="img/IMG_3920.png" title="3D Print Before Assembly" style="width:750px;height:500px;">
+							</div>
+                        <br><br>
+						<table>
+						<tr><td style="width:50%">
 						<h3>Components</h3>
-						<p>
-							Impedance Sensing Subsystem
-							<ul>
-								<li>AD5933 Evaluation Board</li>
-								<li>Coax RG-174 (Shielded Wire)</li>
-								<li>OPA376 Guard Op Amp</li>
-								<li>CD4053BE Multiplexer (2:1) </li>
-							</ul>
-						</p>
-						<p>
-							Motor Subsystem
-							<ul>
-								<li>A4988 Motor Driver</li>
-								<li>1.8° Nema 17 Stepper Motor</li>
-							</ul>
-						</p>
-						<p>
-							Additional Components
-							<ul>
-								<li>Arduino Uno Board with Bluetooth Module</li>
-								<li>Laptop/PC</li>
-							</ul>
-						</p>
-						<br><br><br>
-						
+                            <p>
+                                Impedance Sensing Subsystem
+                                <ul>
+                                    <li>AD5933 Evaluation Board</li>
+                                    <li>Coax RG-174 (Shielded Wire)</li>
+                                    <li>OPA376 Guard Op Amp</li>
+                                    <li>CD4053BE Multiplexer (2:1) </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Motor Subsystem
+                                <ul>
+                                    <li>A4988 Motor Driver</li>
+                                    <li>1.8° Nema 17 Stepper Motor</li>
+                                </ul>
+                            </p>
+                            <p>
+                                Additional Components
+                                <ul>
+                                    <li>Arduino Uno Board with Bluetooth Module</li>
+                                    <li>Laptop/PC</li>
+                                </ul>
+                            </p>
+							</td>
+							<td><h3>Connections Diagram</h3>
+								<br>
+								<img src="img/Copy of Senior Design Connections Diagram Version 4.png" width="725" height="390" >
+                            </td>
+						</tr>
+						</table>
+							
+						<br><br>
 					</div>
 				</div>
 			</div>
@@ -89,22 +133,66 @@
 						As a widespread and often deadly cancer, skin cancer demands more accessible and accurate early diagnostic tools. </p>
 						<p>Early detection is critical, yet current diagnostic methods rely primarily on visual inspection and invasive biopsies, which
 						are costly, uncomfortable, and inaccessible to many.</p>
-						<p>This project proposes a non-invasive imaging system for melanoma detection using EIS — Electrical Impedance Spectroscopy.</p>
+						<p>This project proposes an imaging system for melanoma detection using EIS — Electrical Impedance Spectroscopy.</p>
+						<p>EIS is a noninvasive method that consists of measuring the electrical properties of skin cells to detect early signs of malignancy. 
+							Subtle changes can be detected in cellular structure and composition to indicate the presence of skin cancer.</p>
 						
+						
+
 						<h3>Behind the Process</h3>
 						<br><br>
-						<div class="scroll-container">
-                            <img src="img/Screenshot 2026-02-23 214332.png" style="width:750px;height:500px;">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2nmWoa-66Yo5xylQwIiAxtvMrK2pB2l4CA&s" style="width:750px;height:500px;">
-                        </div>
 						
-						<br>
-						<br>
+						<div class="timeline">
+							<div class="container left">
+								<div class="content">
+								<h3>Week 1-3</h3>
+								<p>Background research of components, understanding bio-impedance and possible improvements -weekly 30 min meetings. </p>
+								</div>
+							</div>
+							<div class="container right">
+								<div class="content">
+								<h3>Week 4-6</h3>
+								<p>Developed block diagram and circuitry. Clear system layout and proof of project concept. Prepared proposal draft and presentation.</p>
+								</div>
+							</div>
+							<div class="container left">
+								<div class="content">
+								<h3>Week 7-9</h3>
+								<p>Proposal was introduced and approved. Ordered components and defined experimental setup & protocols.</p>
+								
+								</div>
+							</div>
+							<div class="container right">
+								<div class="content">
+								<h3>Week 10-12</h3>
+								<p>Acquired AD5933 & Arduino UNO. Explored data acquisition and device communication. Delved into the idea of connecting the MUXs with probes/electrodes. </p>
+								</div>
+							</div>
+							<div class="container left">
+								<div class="content">
+								<h3>Week 13-15</h3>
+								<p>Finalizing final proposal for Senior Design I. Understanding future steps and planning how we intend to finish the prototype.</p>
+								
+								</div>
+							</div>
+							<div class="container right">
+								<div class="content">
+								<h3>Week 16-19</h3>
+								<p>Began subsystem integration, initiated early code development, start of basic 3D design work, collection of initial 
+									impedance data, and testing of electrical connections and shielding to ensure reliable communication and reduced noise. </p>
+								</div>
+							</div>
+							<div class="container left">
+								<div class="content">
+								<h3>Week 20 - Now</h3>
+								<p>Preparing for midterm progress update with revised proposal and presentation. First prototype has been created. Refined anomaly check procedures, improved real-time data processing, and began GUI development. </p>
+								
+								</div>
+							</div>
+						</div>
+						<br><br>
+
+						
 					</div>
 				</div>
 			</div>
@@ -121,12 +209,16 @@
 						<h3>Adriana Oleksak     <small>aoleksak@nyit.edu</small></h3>
 							<p>System Researcher, EIS Signal Engineer, Embedded Firmware Developer
 							</p>
+							<br><br>
 						<h3>Maleshia Motilall     <small>gmotilal@nyit.edu</small></h3>
 							<p>System Researcher, Electrode Interface & Signal Integrity Researcher, Multiplexer & Switching Logic Developer</p>
+							<br><br>
 						<h3>Wayne Kells     <small>wkells@nyit.edu</small></h3>
 							<p>3D Mechanism & Model Designer</p>
+							<br><br>
 						<h3>Imran Kadir     <small>ikadir@nyit.edu</small></h3>
 							<p>Simple GUI Designer</p>
+							<br><br>
 						
 					</div>
 				</div>

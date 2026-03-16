@@ -28,7 +28,7 @@ header{
 }
 
 .logo{
-  width: 50%;
+  width: 55%;
   float: left;
   text-align: left;
   line-height: 100px;
@@ -154,6 +154,21 @@ header{
   color: #666666;
 }
 
+th{
+  text-align: center;
+}
+
+td{
+  font-family:"Zalando Sans Expanded", sans-serif;
+  color: #282820;
+  text-align: left;
+  padding: 15px;
+}
+
+aside{
+  float:right;
+}
+
 div.scroll-container {
   background-color: #282820;
   overflow: auto;
@@ -163,9 +178,131 @@ div.scroll-container {
 
 div.scroll-container img {
   padding: 10px;
+
 }
 
 video {
   float: right;
   margin: 0px 0px 15px 20px;
+}
+
+/* NEW */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #96a5b3;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #96a5b3;
+  border: 4px solid #8493A0;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+  margin-left: -80px;  /* Negative margin pulls it left */
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #96a5b3;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #96a5b3;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #96a5b3;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #96a5b3 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #96a5b3;
+  position: relative;
+  border-radius: 6px;
+}
+
+.content h3{
+  font-family:"Zalando Sans Expanded", sans-serif;
+  font-size: 35px;
+  margin: 0;
+  padding-top: 15px;
+  letter-spacing: 4px;
+  text-align:left;
+  font-weight: 900;
+  color: #282820;
+}
+
+.content p{
+  font-family:"Zalando Sans Expanded", sans-serif;
+  line-height: 25px;
+  text-align: justify;
+  color: #282820;
+}
+
+
+
+figcaption {
+  background-color: #000000;
+  color: #FFFFFF;
+  font: italic large sans-serif;
+  text-align: center;
 }
