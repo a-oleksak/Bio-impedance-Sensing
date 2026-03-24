@@ -15,7 +15,8 @@ This library *should* be compatible with any verison of Arduino IDE, albeit perh
 
 Installation
 ============
-Simply move the entire contents of the folder `libraries` to your `Arduino/libraries` folder, usually in your home directory or documents folder. The contents of the folder `code` can be opened from any location with the Arduino IDE program.
+Simply move the entire contents of the folder `libraries` to your `Arduino/libraries` folder, usually in your home directory or documents folder. The contents of the folder `code` can be opened from any location with the Arduino IDE program. 
+ProcessingGUI_seniorDesign.pde is a file that has to be open with Processing IDE, we will be using this application and code as serial monitor and data visualization.
 
 Hardware
 ========
