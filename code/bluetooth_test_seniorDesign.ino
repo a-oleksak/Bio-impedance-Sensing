@@ -1,3 +1,15 @@
+// -----------------------------------------------------------------------------------------
+// Bluetooth Test
+// Components: HC-05 Bluetooth module, Arduino Uno
+//
+// This code uses the built in LED on the Arduino Uno to introduce the functionality
+// of the bluetooth module.
+//
+// Note: Upload code to the Arduino without the module connected, connect the bluetooth 
+// module and power the Arduino. Pair the HC-05 to your computer and assign the COM port
+// in the Arduino IDE.
+// -----------------------------------------------------------------------------------------
+
 void setup() {
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
