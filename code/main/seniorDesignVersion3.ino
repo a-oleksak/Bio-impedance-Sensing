@@ -1,3 +1,19 @@
+// -----------------------------------------------------------------------------------------
+// Main Senior Design Code (Version 3)
+// Components: as seen in Components diagram
+//
+// This code reads impedance values from the AD5933 over I2C and prints them serially. 
+// With the CD4053BE multiplexer, we use two sets of probes with one AD5933 to receive
+// two sets of data. The stepper motor subsystem moves our sets of probes with the 
+// use of a slider.
+//
+// This code reworks the case switch loop by allowing the user to first decide which set
+// of probes to use in which direction they choose.
+//
+// Note: Upload code to the Arduino without the module connected, connect the bluetooth 
+// module and power the Arduino. Pair the HC-05 to your computer and assign the COM port
+// in the Arduino IDE.
+// -----------------------------------------------------------------------------------------
 #include <Arduino.h>
 #include <Wire.h>
 #include "AD5933.h"
