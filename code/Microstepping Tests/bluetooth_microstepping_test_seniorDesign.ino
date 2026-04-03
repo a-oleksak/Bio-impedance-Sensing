@@ -1,3 +1,14 @@
+// -----------------------------------------------------------------------------------------
+// Bluetooth and Microstepping Test
+// Components: HC-05 Bluetooth module, A4988 Motor Driver, NEMA 17 Stepper Motor, Arduino Uno
+//
+// This code uses the bluetooth module to control the NEMA stepper motor. The connections are
+// the same as the connections diagram, disregard any components that are not mentioned.
+//
+// Note: Upload code to the Arduino without the module connected, connect the bluetooth 
+// module and power the Arduino. Pair the HC-05 to your computer and assign the COM port
+// in the Arduino IDE.
+// -----------------------------------------------------------------------------------------
 #include <Arduino.h>
 
 // Motor steps per revolution. Most steppers are 200 steps or 1.8 degrees/step
