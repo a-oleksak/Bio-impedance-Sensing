@@ -1,7 +1,17 @@
-/*
-ad5933-test
-    Reads impedance values from the AD5933 over I2C and prints them serially.
-*/
+// -----------------------------------------------------------------------------------------
+// AD5933 + MUX Test
+// Components: AD5933, CD4053BE Multiplexer (2:1), Probes, Arduino Uno
+//
+// This code reads impedance values from the AD5933 over I2C and prints them serially. 
+// The connections are the same as the connections diagram, disregard any components 
+// that are not mentioned.
+// 
+// This code introduces the CD4053BE multiplexer, which should allow us to use two sets of probes
+// with one AD5933 to receive two sets of data.
+//
+// This code uses a reference resistor to calculate its gain value, during step up, make sure
+// that V+ and V- are connected to a 10kOhm resistor.
+// -----------------------------------------------------------------------------------------
 
 #include <Wire.h>
 #include "AD5933.h"
