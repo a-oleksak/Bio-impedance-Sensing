@@ -1,7 +1,14 @@
-/*
-ad5933-test
-    Reads impedance values from the AD5933 over I2C and prints them serially.
-*/
+// -----------------------------------------------------------------------------------------
+// AD5933 Test
+// Components: AD5933, Arduino Uno
+//
+// This code reads impedance values from the AD5933 over I2C and prints them serially. 
+// The connections are the same as the connections diagram, disregard any components 
+// that are not mentioned.
+// 
+// This code uses a reference resistor to calculate its gain value, during step up, make sure
+// that V+ and V- are connected to a 10kOhm resistor.
+// -----------------------------------------------------------------------------------------
 
 #include <Wire.h>
 #include "AD5933.h"
