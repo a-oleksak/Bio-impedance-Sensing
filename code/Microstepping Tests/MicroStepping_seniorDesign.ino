@@ -1,6 +1,11 @@
-/*
- * Microstepping demo
- */
+// -----------------------------------------------------------------------------------------
+// Microstepping Test
+// Components: A4988 Motor Driver, NEMA 17 Stepper Motor, Arduino Uno
+//
+// This code tests the functionality of the NEMA stepper motor. It tests the motor movement
+// using rotations and microstepping. The connections are the same as the connections diagram,
+// disregard any components that are not mentioned.
+// -----------------------------------------------------------------------------------------
 
 #include <Arduino.h>
 
