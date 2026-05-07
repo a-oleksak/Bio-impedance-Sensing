@@ -5,7 +5,9 @@ This is the repository for NYIT Senior Design 2025-26, skin cancer diagnosis wit
 The following is contained within the `main branch` of this repository:
 - libraries needed to run arduino ide code,
 - demo codes for each component and subsystem,
-- draft of our overall code
+- draft and final copy of our overall code
+- processing IDE code for GUI visualization
+- 3D model files for 3D printed components
 
 Please consider visiting our [website](https://a-oleksak.github.io/Bio-impedance-Sensing/).
 
