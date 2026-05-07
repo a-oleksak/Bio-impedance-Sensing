@@ -135,6 +135,7 @@ void setup(void) {
         Serial.println("FAILED to set settling cycles!");
         while (true);
     }
+  
   // ---------------- STEPPER INIT ----------------
   stepper.begin(RPM);
   stepper.enable();
