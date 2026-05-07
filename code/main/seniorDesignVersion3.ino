@@ -130,7 +130,11 @@ void setup(void) {
     Serial.println("FAILED in setRange!");
     while (true);
   }
-
+  
+  if (!ad5933.setSettlingCycles(450)) {
+        Serial.println("FAILED to set settling cycles!");
+        while (true);
+    }
   // ---------------- STEPPER INIT ----------------
   stepper.begin(RPM);
   stepper.enable();
