@@ -3,9 +3,9 @@ Bio-impedance-Sensing
 
 This is the repository for NYIT Senior Design 2025-26, skin cancer diagnosis with impedance sensing <br/> 
 The following is contained within the `main branch` of this repository:
-- libraries needed to run arduino ide code,
+- libraries needed to run Arduino IDE code,
 - demo codes for each component and subsystem,
-- draft and final copy of our overall code
+- drafts and final copy of our overall code
 - processing IDE code for GUI visualization
 - 3D model files for 3D printed components
 
@@ -13,7 +13,7 @@ Please consider visiting our [website](https://a-oleksak.github.io/Bio-impedance
 
 Compatibility
 =============
-This library *should* be compatible with any verison of Arduino IDE, albeit perhaps with some changes. It was developed and tested with version 2.3.7.
+This library *should* be compatible with any version of Arduino IDE, albeit perhaps with some changes. It was developed and tested with version 2.3.7.
 
 Installation
 ============
